@@ -1,0 +1,9 @@
+
+/**/
+form div + div {
+    background: red;
+}
+
+h2, li {
+    color: blue;
+}

@@ -1,0 +1,62 @@
+/*Selector de etiqueta (Tag)*/
+
+header{
+    color: red;
+}
+
+h2 {
+    background: yellow;
+}
+
+/* Selector de ID */
+
+#moreInfo {
+    color: skyblue;
+}
+
+
+/* Selector de tipo Clase */
+
+.foo{
+    background: peru;
+}
+
+/* Selector de tipo Atributo*/
+
+[type] {
+    border: 1px solid color(blue);
+}
+
+[type="text"] {
+    background: green;
+}
+
+
+/* Selector de descendiente*/
+
+#listHeader li {
+    background: pink;
+}
+
+
+
+/* Selector de descendiente*/
+/*:first-child, :last-child*/
+#listHeader li:nth-child(3) {
+    background: purple;
+}
+
+h2[data-foo]{
+    border:  5px solid blue;
+}
+
+#moreInfo.foo{
+    border:  10px solid red;
+}
+
+/* combinaciones de elementos hijos mas proximos*/
+
+header > p {
+    border:  5px solid aqua;
+}
+
