@@ -1,0 +1,9 @@
+{
+    "login": {    
+        "invalidMails": ["aa@@test", "@@asd0", "@appwiz.dev", "aaa@"],
+        "user": "demo@appwiz.dev",
+        "password": "Demo@2223"
+    }
+
+}
+  
