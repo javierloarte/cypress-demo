@@ -3,12 +3,13 @@ describe("The book page", () => {
 
         beforeEach( function()  {
             cy.visit("https://output.appwiz.dev/app/login");
-            cy.fixture("appwiz/appwizData.json").as("pageData").then((data) => {
+            cy.fixture("appwiz/appwizData.json")
+            .as("pageData")
+            .then(function (data)  {
                 cy.login(data.login.user, data.login.password);
               });
         })
-
-    
+        
     })
 
 })
