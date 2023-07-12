@@ -3,8 +3,9 @@ describe("The book page", () => {
 
         beforeEach( function()  {
             cy.visit("https://output.appwiz.dev/app/login");
-            cy.fixture("appwizData.json").as("pageData")
-            cy.login(this.pageData.login.user, this.pageData.login.password);
+            cy.fixture("appwiz/appwizData.json").as("pageData").then((data) => {
+                cy.login(data.login.user, data.login.password);
+              });
         })
 
     
