@@ -3,6 +3,14 @@
         "invalidMails": ["aa@@test", "@@asd0", "@appwiz.dev", "aaa@"],
         "user": "demo@appwiz.dev",
         "password": "Demo@2223"
+    },
+
+    "bookSection":{
+        "search" :{
+            "input": "Madeline herman",
+            "expected" : "Madeline",
+            "input_error": "afkjdfjfasdflk"
+        }
     }
 
 }

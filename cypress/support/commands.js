@@ -12,9 +12,21 @@
 // -- This is a parent command --
  Cypress.Commands.add('login', (user, password) => { 
    // console.log("Comando custom", this.pageData.login.user, this.pageData.login.password)
-    cy.get("input[formcontrolname='email']").type(user);
-    cy.get("input[formcontrolname='password']").type(password);
-    cy.get("button[type='submit']").click();
+   cy.session([user, password], () => {
+        /*
+        cy.visit("https://output.appwiz.dev/app/login");
+        cy.get("input[formcontrolname='email']").type(user);
+        cy.get("input[formcontrolname='password']").type(password);
+        cy.get("button[type='submit']").click();
+        cy.url().should("contain","/dashboard");
+        */
+
+        cy.visit("https://output.appwiz.dev/app/login");
+        cy.get("input[formcontrolname='email']").type(user);
+        cy.get("input[formcontrolname='password']").type(password);
+        cy.get("button[type='submit']").click();
+        cy.url().should("contain", "/dashboard");
+    })
   })
 //
 //
